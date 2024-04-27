@@ -17,6 +17,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/brands', function () {
+    return view('brands');
+});
+Route::get('/about-us', function () {
+    return view('about_us');
+});
+Route::get('/auth-choice', function () {
+    return view('auth.auth_choice');
+});
+Route::get('/brand-register', function () {
+    return view('auth.brand_register');
+});
+Route::get('/user-register', function () {
+    return view('auth.user_register');
+});
+
+Route::get('/user-login', function () {
+    return view('auth.user_login');
+});
+Route::get('/brand-login', function () {
+    return view('auth.brand_login');
+});
+Route::get('/admin', function () {
+    return view('auth.admin_login');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
