@@ -9,7 +9,8 @@
 
             <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                 <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                    <form method="POST" action="#">
+                    <form method="POST" action={{route('user.login')}}>
+                        @csrf
                         <div class="mt-2">
                             <div class="relative h-11 w-full min-w-[200px]">
                                 <input placeholder="البريد الإلكتروني" name="email" required
@@ -19,6 +20,9 @@
                                     البريد الإلكتروني
                                 </label>
                             </div>
+                            @error('email')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mt-6">
                             <div class="relative h-11 w-full min-w-[200px]">
@@ -29,6 +33,9 @@
                                     كلمة المرور
                                 </label>
                             </div>
+                            @error('password')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
                         </div> 
                         <div class="mt-6">
                             <span class="block w-full rounded-md shadow-sm">

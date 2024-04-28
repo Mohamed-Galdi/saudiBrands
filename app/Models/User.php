@@ -17,11 +17,17 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name', 'email', 'password', 'role'];
+
+    public function brands()
+    {
+        return $this->hasMany(Brand::class, 'owner_id');
+    }
+    public function favorites()
+    {
+        return $this->belongsToMany(Brand::class, 'brand_user', 'user_id', 'brand_id')->withTimestamps();
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.

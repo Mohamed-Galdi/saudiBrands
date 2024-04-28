@@ -31,29 +31,36 @@
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3 ">
                     {{-- ///////////////////// My Account Buttuns in auth case //////////////////////// --}}
                     @if (Auth::check())
+                        <form action={{ route('logout') }} method="POST" >
+                            @csrf
+                            <button type="submit"
+                                class="text-gray-200 flex gap-2 justify-center bg-gray-800 hover:bg-gray-900 font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                                <p>تسجيل الخروج</p>
+                            </button>
+                        </form>
                         @if (Auth::user()->role === 'admin')
-                            <a href="/admin"
-                                class="text-gray-200 flex gap-2 justify-center bg-soft_black font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                            <a href="/admin-page"
+                                class="text-pr_dark flex gap-2 justify-center bg-gray-300 font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4">
-                                    <path fill="#e2e5e9"
+                                    <path fill="#425b45"
                                         d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                                 </svg>
                                 <p>حسابي</p>
                             </a>
-                        @elseif (Auth::user()->role === 'student')
-                            <a href="/student"
-                                class="text-gray-200 flex gap-2 justify-center bg-soft_black font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                        @elseif (Auth::user()->role === 'user')
+                            <a href="/user-page"
+                                class="text-pr_dark flex gap-2 justify-center bg-gray-300 font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4">
-                                    <path fill="#e2e5e9"
+                                    <path fill="#425b45"
                                         d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                                 </svg>
                                 <p>حسابي</p>
                             </a>
-                        @elseif (Auth::user()->role === 'driver')
-                            <a href="/driver"
-                                class="text-gray-200 flex gap-2 justify-center bg-soft_black font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                        @elseif (Auth::user()->role === 'brand')
+                            <a href="/brand-owner-page"
+                                class="text-pr_dark flex gap-2 justify-center bg-gray-300 font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4">
-                                    <path fill="#e2e5e9"
+                                    <path fill="#425b45"
                                         d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                                 </svg>
                                 <p>حسابي</p>
@@ -69,8 +76,6 @@
                                     الدخول
                                 </a>
                             </div>
-                            
-
                         </div>
                     @endif
                     {{-- ///////////////////// Mobile Menu Button //////////////////////// --}}
@@ -93,10 +98,10 @@
                                 الرئيسية
                             </li>
                         </a>
-                        <a href="{{ url('/brands') }}">
+                        <a href="{{ url('/categories') }}">
                             <li
-                                class=" p-2  font-pr {{ Request::is('brands') ? 'bg-black text-white rounded-lg border-2 border-black ' : 'text-black border-b border-pr md:hover:border-black md:hover:border-b-2 md:hover:bg-pr hover:bg-pr transition-all duration-200 hover:rounded-lg md:rounded-none rounded-lg ' }}">
-                                الشركات </li>
+                                class=" p-2  font-pr {{ Request::is('categories') ? 'bg-black text-white rounded-lg border-2 border-black ' : 'text-black border-b border-pr md:hover:border-black md:hover:border-b-2 md:hover:bg-pr hover:bg-pr transition-all duration-200 hover:rounded-lg md:rounded-none rounded-lg ' }}">
+                                الفئات </li>
                         </a>
                         <a href="{{ url('/about-us') }}">
                             <li
@@ -107,14 +112,14 @@
 
                         <li class="flex justify-start gap-2 md:hidden ">
                             {{-- mobile login button --}}
-                           <div class="w-full flex items-center justify-center cursor-pointer">
+                            <div class="w-full flex items-center justify-center cursor-pointer">
                                 <a href="/auth-choice"
                                     class="relative font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-white before:-right-full before:hover:right-0 before:rounded-full before:bg-pr before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-6 py-3  font-semibold text-black bg-white border rounded-lg shadow-sm gap-x-2 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
                                     الدخول
                                 </a>
                             </div>
                             {{-- mobile register button --}}
-                            
+
                         </li>
                     </ul>
                 </div>
@@ -140,9 +145,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('/brands') }}"
-                            class="hover:underline me-4 md:me-6 {{ Request::is('brands') ? 'text-pr ' : 'text-white' }}">
-                            الشركات
+                        <a href="{{ url('/categories') }}"
+                            class="hover:underline me-4 md:me-6 {{ Request::is('categories') ? 'text-pr ' : 'text-white' }}">
+                            الفئات
                         </a>
                     </li>
                     <li>
@@ -184,7 +189,7 @@
                 الحقوق محفوضة</span>
         </div>
     </footer>
-    {{-- @include('sweetalert::alert') --}}
+    @include('sweetalert::alert')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 

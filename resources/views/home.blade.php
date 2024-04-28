@@ -13,7 +13,7 @@
 
                 <div class="w-full mt-4 flex justify-start items-start gap-8">
                     <div class=" flex items-center justify-center cursor-pointer">
-                        <a href=""
+                        <a href="/categories"
                             class="relative w-40 font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-pr_dark before:-right-full before:hover:right-0 before:rounded-full before:bg-pr before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-6 py-3  font-semibold text-white bg-pr_dark border rounded-lg shadow-sm gap-x-2 hover:bg-pr_dark disabled:opacity-50 disabled:pointer-events-none text-nowrap">
                             تصفح الشركات
                         </a>

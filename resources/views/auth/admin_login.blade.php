@@ -9,7 +9,8 @@
 
             <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                 <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                    <form method="POST" action="#">
+                    <form method="POST" action={{route('admin.login')}}>
+                        @csrf
                         <div class="mt-2">
                             <div class="relative h-11 w-full min-w-[200px]">
                                 <input placeholder="البريد الإلكتروني" name="email" required
