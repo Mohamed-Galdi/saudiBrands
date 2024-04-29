@@ -1,12 +1,12 @@
 @extends('layouts.master')
 @section('content')
-    <div class="w-full h-[90vh] bg-pr flex justify-center items-center">
+    <div class="w-[70vw] h-[70vh] flex justify-center items-center mx-auto mt-12">
         <div class="bg-gray-200 rounded-xl w-4/6 h-5/6 flex flex-col md:flex-row overflow-hidden">
 
             {{-- //////////////////// Driver Login //////////////////////// --}}
-            <div class="md:w-1/2 w-full md:h-full h-1/2 bg-gray-900 relative flex flex-col justify items-center">
-                <h2 class="font-pr text-4xl text-center md:mt-20 mt-8 text-white mb-8 ">الدخول كصاحب شركة
-</h2>
+            <div class="md:w-1/2 w-full md:h-full h-1/2 bg-pr_dark relative flex flex-col justify items-center">
+                <h2 class="font-pr text-2xl text-center md:mt-20 mt-8 text-white mb-8 ">الدخول كصاحب شركة
+                </h2>
                 {{-- login button --}}
                 <div class="w-full flex items-center justify-center cursor-pointer">
                     <a href="/brand-login"
@@ -36,12 +36,15 @@
                     ليس لديك حساب بعد، قم بإنشائه <span class="text-blue-500 cursor-pointer"><a href="/brand-register">من
                             هنا</a></span>
                 </p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-36 h-36 mt-12 "><path fill="#fff" d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-24 h-24 mt-12 ">
+                    <path fill="#fff"
+                        d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
+                </svg>
             </div>
 
             {{-- //////////////////// Student Login //////////////////////// --}}
-            <div class="md:w-1/2 w-full md:h-full h-1/2 bg-gray-100 relative flex flex-col justify items-center">
-                <h2 class="font-pr text-4xl text-center md:mt-20 mt-8 text-soft_black mb-8 ">الدخول كعميل</h2>
+            <div class="md:w-1/2 w-full md:h-full h-1/2 bg-pr relative flex flex-col justify items-center">
+                <h2 class="font-pr text-3xl text-center md:mt-20 mt-8 text-soft_black mb-8 ">الدخول كعميل</h2>
                 {{-- login button --}}
                 <div class="w-full flex items-center justify-center cursor-pointer">
                     <a href="/user-login"
@@ -71,7 +74,10 @@
                     ليس لديك حساب بعد، قم بإنشائه <span class="text-blue-500 cursor-pointer"><a href="/user-register">من
                             هنا</a></span>
                 </p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-36 h-36 mt-12" fill="#121828"><path  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-24 h-24 mt-12" fill="#121828">
+                    <path
+                        d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                </svg>
             </div>
         </div>
     </div>

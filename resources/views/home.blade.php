@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="p-6">
-                                <h5 class="mb-4 text-xl font-semibold font-pr">أزيد من 30 علامة تجارية</h5>
+                                <h5 class="mb-4 text-xl font-semibold font-pr">أكثر من 30 علامة تجارية</h5>
                                 <p class="font-sec text-justify">
                                     مجموعة متنوعة وشاملة من العلامات التجارية السعودية المميزة والمبتكرة. يتم اختيار هذه
                                     العلامات بعناية لتقديم مجموعة متنوعة من المنتجات والخدمات .
@@ -175,58 +175,6 @@
                         </p>
                     </div>
                 </li>
-                <li class="bg-pr_dark my-2 shadow-lg" x-data="accordion(3)">
-                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="font-sec text-white text-2xl">هل يمكن للعملاء الثقة في جودة المنتجات </span>
-                        <svg :class="handleRotate()"
-                            class="fill-current text-tawsila-600 h-6 min-w-6 transform transition-transform duration-500"
-                            viewBox="0 0 20 20">
-                            <path
-                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
-                            </path>
-                        </svg>
-                    </h2>
-                    <div x-ref="tab" :style="handleToggle()"
-                        class="border-l-8 border-pr overflow-hidden bg-white max-h-0 duration-500 transition-all bg-soft_black">
-                        <p class="p-3 text-pr_dark font-pr text-xl ">بالتأكيد! نحن نضمن أن جميع العلامات التجارية المعروضة على منصتنا تلبي معايير الجودة وتقدم منتجات أصلية. رضا العملاء والثقة هما أولويتنا الأساسية.
-                        </p>
-                    </div>
-                </li>
-                <li class="bg-pr_dark my-2 shadow-lg" x-data="accordion(4)">
-                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="font-sec text-white text-2xl">هل تقدمون دعمًا للشركات المحلية</span>
-                        <svg :class="handleRotate()"
-                            class="fill-current text-tawsila-600 h-6 min-w-6 transform transition-transform duration-500"
-                            viewBox="0 0 20 20">
-                            <path
-                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
-                            </path>
-                        </svg>
-                    </h2>
-                    <div x-ref="tab" :style="handleToggle()"
-                        class="border-l-8 border-pr overflow-hidden bg-white max-h-0 duration-500 transition-all bg-soft_black">
-                        <p class="p-3 text-pr_dark font-pr text-xl ">نعم، نحن ملتزمون بدعم الشركات المحلية في المملكة العربية السعودية. سواء كنت شركة ناشئة أو علامة تجارية مُعتمدة
-                        </p>
-                    </div>
-                </li>
-                <li class="bg-pr_dark my-2 shadow-lg" x-data="accordion(5)">
-                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
-                        <span class="font-sec text-white text-2xl">هل هناك فوائد للعملاء الذين يسجلون</span>
-                        <svg :class="handleRotate()"
-                            class="fill-current text-tawsila-600 h-6 min-w-6 transform transition-transform duration-500"
-                            viewBox="0 0 20 20">
-                            <path
-                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
-                            </path>
-                        </svg>
-                    </h2>
-                    <div x-ref="tab" :style="handleToggle()"
-                        class="border-l-8 border-pr overflow-hidden bg-white max-h-0 duration-500 transition-all bg-soft_black">
-                        <p class="p-3 text-pr_dark font-pr text-xl ">نعم بالتأكيد! من خلال التسجيل على منصتنا، تحصل العملاء على فرصة الوصول إلى صفقات حصرية وعروض وتحديثات حول العلامات التجارية المحلية المفضلة لديهم.
-                        </p>
-                    </div>
-                </li>
-
             </ul>
         </div>
     </div>

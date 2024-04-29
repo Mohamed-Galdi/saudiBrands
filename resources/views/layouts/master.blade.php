@@ -39,7 +39,7 @@
                             </button>
                         </form>
                         @if (Auth::user()->role === 'admin')
-                            <a href="/admin-page"
+                            <a href={{route('admin.brands')}}
                                 class="text-pr_dark flex gap-2 justify-center bg-gray-300 font-pr focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4">
                                     <path fill="#425b45"
@@ -92,20 +92,21 @@
                 {{-- ///////////////////// Menu //////////////////////// --}}
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul class="flex flex-col md:flex-row md:gap-6 gap-2 mt-6 md:mt-0">
+                        
                         <a href="{{ url('/') }}">
                             <li
-                                class=" p-2  font-pr {{ Request::is('/') ? 'bg-black text-white rounded-lg border-2 border-black ' : 'text-black border-b border-pr transition-all duration-200 hover:rounded-lg md:hover:border-black md:hover:border-b-2 md:hover:bg-pr hover:bg-pr md:rounded-none rounded-lg ' }}">
+                                class=" p-2  font-pr text-pr hover:text-gray-700">
                                 الرئيسية
                             </li>
                         </a>
                         <a href="{{ url('/categories') }}">
                             <li
-                                class=" p-2  font-pr {{ Request::is('categories') ? 'bg-black text-white rounded-lg border-2 border-black ' : 'text-black border-b border-pr md:hover:border-black md:hover:border-b-2 md:hover:bg-pr hover:bg-pr transition-all duration-200 hover:rounded-lg md:rounded-none rounded-lg ' }}">
+                                class=" p-2  font-pr text-pr hover:text-gray-700">
                                 الفئات </li>
                         </a>
                         <a href="{{ url('/about-us') }}">
                             <li
-                                class=" p-2  font-pr {{ Request::is('about-us') ? 'bg-black text-white rounded-lg border-2 border-black ' : 'text-black border-b border-pr md:hover:border-black md:hover:border-b-2 md:hover:bg-pr hover:bg-pr transition-all duration-200 hover:rounded-lg md:rounded-none rounded-lg ' }}">
+                                class=" p-2  font-pr text-pr hover:text-gray-700">
                                 من نحن
                             </li>
                         </a>
@@ -132,7 +133,7 @@
     </main>
 
     {{-- ///////////////////// Footer //////////////////////// --}}
-    <footer class="bg-gray-800   w-full z-20 bottom-0 start-0 border-t border-gray-200 ">
+    {{-- <footer class="bg-gray-800   w-full z-20 bottom-0 start-0 border-t border-gray-200 ">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="flex sm:flex-row flex-col  items-center justify-between">
                 <a href="" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -188,7 +189,7 @@
             <span class="block text-sm text-white sm:text-center text-center">© 2024 Saudi Brands, جميع
                 الحقوق محفوضة</span>
         </div>
-    </footer>
+    </footer> --}}
     @include('sweetalert::alert')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>

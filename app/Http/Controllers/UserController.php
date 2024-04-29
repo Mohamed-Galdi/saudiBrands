@@ -88,14 +88,7 @@ class UserController extends Controller
 
         return redirect()->route('brandOwner.page');
     }
-    public function adminLogin(LoginRequest $request)
-    {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-
-        return redirect()->route('admin.page');
-    }
+    
 
     public function userPage()
     {
@@ -111,10 +104,7 @@ class UserController extends Controller
         return view('user.brand_owner_page', compact('brands'));
     }
 
-    public function adminPage()
-    {
-        return view('user.admin_page');
-    }
+   
 
     public function logout(Request $request)
     {

@@ -14,17 +14,19 @@
                     <p class="font-pr text-xl text-center mt-2">{{ $restaurant->name }}</p>
                     <p class="text-pr_dark underline font-pr text-center">{{ $restaurant->address }}</p>
                     <div class="w-full my-4 flex justify-center items-start gap-8">
+                        @if (Auth::check() && Auth::user()->role == 'user')
+                            <div class=" flex items-center justify-center cursor-pointer">
+                                <form action="{{ route('addToFavorites', ['brand' => $restaurant->id]) }}" method="POST">
+                                    @csrf
+                                    <button type="submit"
+                                        class="relative w-32 font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-pr_dark before:-right-full before:hover:right-0 before:rounded-full before:bg-pr before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-3 py-2  font-semibold text-white bg-pr_dark border rounded-lg shadow-sm gap-x-2 hover:bg-pr_dark disabled:opacity-50 disabled:pointer-events-none text-nowrap">
+                                        إضافة للمفضلة
+                                    </button>
+                                </form>
+                            </div>
+                        @endif
                         <div class=" flex items-center justify-center cursor-pointer">
-                           <form action="{{ route('addToFavorites', ['brand' => $restaurant->id]) }}" method="POST">
-                                @csrf
-                                <button type="submit" 
-                                    class="relative w-32 font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-pr_dark before:-right-full before:hover:right-0 before:rounded-full before:bg-pr before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-3 py-2  font-semibold text-white bg-pr_dark border rounded-lg shadow-sm gap-x-2 hover:bg-pr_dark disabled:opacity-50 disabled:pointer-events-none text-nowrap">
-                                    إضافة للمفضلة
-                                </button>
-                            </form>
-                        </div>
-                        <div class=" flex items-center justify-center cursor-pointer">
-                            <a href={{'https://'.$restaurant->address}} target="_blank"
+                            <a href={{ 'https://' . $restaurant->address }} target="_blank"
                                 class="relative w-32 font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-white before:-right-full before:hover:right-0 before:rounded-full before:bg-pr before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-3 py-2  font-semibold text-black bg-white border rounded-lg shadow-sm gap-x-2 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
                                 زيارة
                             </a>
