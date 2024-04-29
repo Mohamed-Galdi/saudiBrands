@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
     <div>
-        <div class="min-h-screen bg-gray-50 flex flex-col justify-start py-12 sm:px-6 lg:px-8">
+        <div class="min-h-screen bg-pr flex flex-col justify-start py-12 sm:px-6 lg:px-8 ">
             <div class="sm:mx-auto sm:w-full sm:max-w-md">
-                <h2 class="mt-6 font-sec text-center text-3xl leading-9 font-extrabold text-gray-900">
+                <h2 class="mt-6 font-sec text-center text-3xl leading-9 font-extrabold text-pr_dark">
                     تسجيل الدخول كمشرف </h2>
             </div>
 
@@ -20,6 +20,9 @@
                                     البريد الإلكتروني
                                 </label>
                             </div>
+                            @error('email')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mt-6">
                             <div class="relative h-11 w-full min-w-[200px]">
@@ -30,6 +33,9 @@
                                     كلمة المرور
                                 </label>
                             </div>
+                            @error('password')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
                         </div> 
                         <div class="mt-6">
                             <span class="block w-full rounded-md shadow-sm">

@@ -8,7 +8,7 @@
             <div class="md:ms-32 ms-8 flex flex-col gap-2 md:mt-36 mt-24">
 
                 <h1 class="md:text-9xl text-6xl text-pr_dark font-pr">SA</h1>
-                <h2 class="md:text-5xl text-2xl text-pr_dark font-pr">صنع في السعودية</h2>
+                <h2 class="md:text-5xl text-2xl text-[#b9b298] font-prm">صنع في السعودية</h2>
                 <p class="md:text-2xl text-lg text-gray-500 font-sec mt-6">وجهه مميزه لدعم الشركات المحليه في مجالات مختلفه</p>
 
                 <div class="w-full mt-4 flex justify-start items-start gap-8">
@@ -20,7 +20,7 @@
                     </div>
                     <div class=" flex items-center justify-center cursor-pointer">
                         <a href="/auth-choice"
-                            class="relative w-36 font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-white before:-right-full before:hover:right-0 before:rounded-full before:bg-pr before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-6 py-3  font-semibold text-black bg-white border rounded-lg shadow-sm gap-x-2 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                            class="relative w-36 font-sec text-md isolation-auto z-10  border-pr before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-white before:-right-full before:hover:right-0 before:rounded-full before:bg-pr_dark before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center px-6 py-3  font-semibold text-black bg-pr border rounded-lg shadow-sm gap-x-2 hover:bg-pr disabled:opacity-50 disabled:pointer-events-none">
                             الدخول
                         </a>
                     </div>
@@ -154,7 +154,8 @@
                     </h2>
                     <div x-ref="tab" :style="handleToggle()"
                         class="border-l-8 border-pr overflow-hidden bg-white max-h-0 duration-500 transition-all bg-soft_black">
-                        <p class="p-3 text-pr_dark font-pr text-xl ">نقدم مجموعة متنوعة من العلامات التجارية السعودية المحلية في مختلف الصناعات بما في ذلك الموضة، الإلكترونيات، السلع المنزلية، الأطعمة والمشروبات، الصحة والجمال، والمزيد.
+                        <p class="p-3 text-pr_dark font-pr text-xl ">
+                            نقدم مجموعه متنوعه من الشركات المحليه السعوديه مثل المطاعم والمقاهي وشركات الملابس والعطور
                         </p>
                     </div>
                 </li>

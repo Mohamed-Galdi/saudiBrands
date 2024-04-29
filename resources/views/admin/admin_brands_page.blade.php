@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div class="my-20 flex flex-col justify-start  items-center mx-auto max-w-screen-xl min-h-[70vh]">
-        <div class="flex gap-8">
+        {{-- <div class="flex gap-8">
             <a href={{route('admin.brands')}}
                 class="mb-6 bg-pr_dark p-2 w-48 text-white flex justify-center items-center gap-4 drop-shadow-lg hover:bg-pr-600 hover:cursor-pointer rounded-md hover:bg-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-8 h-8">
@@ -19,7 +19,7 @@
                 </svg>
                 <p class="font-sec">المستخدمين</p>
             </a>
-        </div>
+        </div> --}}
         <div class=" relative overflow-x-auto shadow-md sm:rounded-lg w-full  ">
             <table class="w-full  text-right text-gray-500 dark:text-gray-400 ">
                 <thead class=" text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

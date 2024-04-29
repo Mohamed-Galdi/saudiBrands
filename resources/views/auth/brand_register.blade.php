@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
     <div>
-        <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div class="min-h-screen bg-pr flex flex-col justify-center py-12 sm:px-6 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-md">
-                <h2 class="mt-6 font-sec text-center text-3xl leading-9 font-extrabold text-gray-900">
+                <h2 class="mt-6 font-sec text-center text-3xl leading-9 font-extrabold text-pr_dark">
                     إنشاء حساب صاحب شركة </h2>
             </div>
 

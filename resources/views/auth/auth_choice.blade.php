@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div class="w-[70vw] h-[70vh] flex justify-center items-center mx-auto mt-12">
-        <div class="bg-gray-200 rounded-xl w-4/6 h-5/6 flex flex-col md:flex-row overflow-hidden">
+        <div class="rounded-xl w-4/6 h-5/6 flex flex-col md:flex-row overflow-hidden">
 
             {{-- //////////////////// Driver Login //////////////////////// --}}
             <div class="md:w-1/2 w-full md:h-full h-1/2 bg-pr_dark relative flex flex-col justify items-center">

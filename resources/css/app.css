@@ -5,11 +5,16 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: "pr";
+    /* @font-face {
+        font-family: "prno";
         font-weight: 400;
-        src: url("../../public/fonts/pr.otf");
+        src: url("../../public/fonts/prf.otf");
     }
+    @font-face {
+        font-family: "prfr";
+        font-weight: 400;
+        src: url("../../public/fonts/verdana.ttf");
+    } */
 
    
 }
